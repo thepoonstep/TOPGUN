@@ -16,7 +16,7 @@ app.post('/getpm', function (req, res) {
   var time = JSON.stringify(date);
   console.log(time);
   var Data = req.body;
-  var PM = parseInt(Data.payload_hex,16).toString(2);
+  var PM = parseInt(Data.FPort,16).toString(2);
   var PMZ = "00000000"+PM;
   var team_PM = "00001101";
 
@@ -28,7 +28,7 @@ team_PM = team_PM+PMZ.substr(PMZ.length-8,PMZ.length);
 request.post({
     url: 'https://tsup-9c256.firebaseio.com/test.json',
     json:{
-        sensor:team_PM
+        payload:team_PM
     }
     
 },(err,res,body)=>{
@@ -43,7 +43,7 @@ request.post({
         "team":13,
         "latitude":Lat,
         "longitude": Lon,
-        "timestamp":time
+        "timestamp": date
 
     }
     
