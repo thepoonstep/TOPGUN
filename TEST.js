@@ -39,6 +39,19 @@ request.post({
 });
 
 request.post({
+  url: 'https://tgr2020-quiz.firebaseio.com/quiz/sensor/team13.json',
+  //url: 'https://tsup-9c256.firebaseio.com/testsensor.json',
+  json:{
+      payload:team_PM
+  }
+  
+},(err,res,body)=>{
+  console.log("send Sensor Complete");
+  
+  
+});
+
+request.post({
     //url: 'https://tgr2020-quiz.firebaseio.com/quiz/location/team13.json',
     url: 'https://tsup-9c256.firebaseio.com/testlocation.json',
     json:{
@@ -52,6 +65,22 @@ request.post({
 },(err,res,body)=>{
     console.log("send Location Complete");
     
+});
+
+request.post({
+  url: 'https://tgr2020-quiz.firebaseio.com/quiz/location/team13.json',
+  //url: 'https://tsup-9c256.firebaseio.com/testlocation.json',
+  json:{
+      "team":13,
+      "latitude":Lat,
+      "longitude": Lon,
+      "timestamp": date
+
+  }
+  
+},(err,res,body)=>{
+  console.log("send Location Complete");
+  
 });
 
 
