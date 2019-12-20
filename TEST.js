@@ -20,8 +20,8 @@ app.post('/getpm', function (req, res) {
   var PMZ = "00000000"+PM;
   var team_PM = "00001101";
 
-  var Lat = parseFloat(Data.LrrLAT);
-  var Lon = parseFloat(Data.LrrLON);
+  var Lat = parseFloat(Data.DevEUI_uplink.LrrLAT);
+  var Lon = parseFloat(Data.DevEUI_uplink.LrrLON);
 
 team_PM = team_PM+PMZ.substr(PMZ.length-8,PMZ.length);
 
@@ -33,9 +33,7 @@ request.post({
     
 },(err,res,body)=>{
     console.log("send Sensor Complete");
-    console.log(Data);
-    console.log(PM);
-    console.log(Data.DevEUI_uplink.FPort);
+    
     
 });
 
