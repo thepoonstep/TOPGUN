@@ -33,7 +33,7 @@ request.post({
     
 },(err,res,body)=>{
     console.log("send Sensor Complete");
-    console.log(Data);
+    console.log(PM);
     
 });
 
