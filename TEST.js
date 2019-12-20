@@ -34,7 +34,7 @@ request.post({
 },(err,res,body)=>{
     console.log("send Sensor Complete");
     console.log(Data);
-    console.log(Data.PM);
+    console.log(2);
     console.log(Data.FPort);
     
 });
