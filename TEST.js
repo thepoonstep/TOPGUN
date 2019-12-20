@@ -26,7 +26,8 @@ app.post('/getpm', function (req, res) {
 team_PM = team_PM+PMZ.substr(PMZ.length-8,PMZ.length);
 
 request.post({
-    url: 'https://tsup-9c256.firebaseio.com/team13_sensor.json',
+    //url: 'https://tgr2020-quiz.firebaseio.com/quiz/sensor/team13.json',
+    url: 'https://tsup-9c256.firebaseio.com/testsensor',
     json:{
         payload:team_PM
     }
@@ -38,7 +39,8 @@ request.post({
 });
 
 request.post({
-    url: 'https://tsup-9c256.firebaseio.com/team13_location.json',
+    //url: 'https://tgr2020-quiz.firebaseio.com/quiz/location/team13.json',
+    url: 'https://tsup-9c256.firebaseio.com/testlocation',
     json:{
         "team":13,
         "latitude":Lat,
