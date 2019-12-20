@@ -26,7 +26,7 @@ app.post('/getpm', function (req, res) {
 team_PM = team_PM+PMZ.substr(PMZ.length-8,PMZ.length);
 
 request.post({
-    url: 'https://tsup-9c256.firebaseio.com/test.json',
+    url: 'https://tsup-9c256.firebaseio.com/team13_sensor.json',
     json:{
         payload:team_PM
     }
@@ -38,7 +38,7 @@ request.post({
 });
 
 request.post({
-    url: 'https://tsup-9c256.firebaseio.com/test2.json',
+    url: 'https://tsup-9c256.firebaseio.com/team13_location.json',
     json:{
         "team":13,
         "latitude":Lat,
