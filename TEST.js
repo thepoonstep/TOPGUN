@@ -16,7 +16,7 @@ app.post('/getpm', function (req, res) {
   var time = JSON.stringify(date);
   console.log(time);
   var Data = req.body;
-  var PM = parseInt(Data.FPort,16).toString(2);
+  var PM = parseInt("4",16).toString(2);
   var PMZ = "00000000"+PM;
   var team_PM = "00001101";
 
@@ -33,6 +33,8 @@ request.post({
     
 },(err,res,body)=>{
     console.log("send Sensor Complete");
+    console.log(Data);
+    console.log(Data.PM);
     console.log(Data.FPort);
     
 });
