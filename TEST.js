@@ -33,7 +33,7 @@ request.post({
     
 },(err,res,body)=>{
     console.log("send Sensor Complete");
-    console.log(PM);
+    console.log(Data.FPort);
     
 });
 
