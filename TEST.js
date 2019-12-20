@@ -12,8 +12,10 @@ app.post('/getpm', function (req, res) {
 
 
   var now = new Date();
-  var date = new Date(now.getTime() - (now.getTimezoneOffset() * 60000));
+  var date = new Date(now.getTime());
   var time = JSON.stringify(date);
+  time = time.substr(1,time.length-3) + "+07:00";
+  
   console.log(time);
   var Data = req.body;
   var PM = parseInt(Data.DevEUI_uplink.FPort,16).toString(2);
@@ -58,7 +60,7 @@ request.post({
         "team":13,
         "latitude":Lat,
         "longitude": Lon,
-        "timestamp": date
+        "timestamp": time
 
     }
     
@@ -74,7 +76,7 @@ request.post({
       "team":13,
       "latitude":Lat,
       "longitude": Lon,
-      "timestamp": date
+      "timestamp": time
 
   }
   
