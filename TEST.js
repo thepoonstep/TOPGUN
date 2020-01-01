@@ -28,7 +28,6 @@ app.post('/getpm', function (req, res) {
 team_PM = team_PM+PMZ.substr(PMZ.length-8,PMZ.length);
 
 request.post({
-    //url: 'https://tgr2020-quiz.firebaseio.com/quiz/sensor/team13.json',
     url: 'https://tsup-9c256.firebaseio.com/testsensor.json',
     json:{
         payload:team_PM
@@ -41,8 +40,8 @@ request.post({
 });
 
 request.post({
-  url: 'https://tgr2020-quiz.firebaseio.com/quiz/sensor/team13.json',
-  //url: 'https://tsup-9c256.firebaseio.com/testsensor.json',
+  url: 'https://tgr2020-quiz2.firebaseio.com/quiz/sensor/team13.json',
+
   json:{
       payload:team_PM
   }
@@ -54,7 +53,7 @@ request.post({
 });
 
 request.post({
-    //url: 'https://tgr2020-quiz.firebaseio.com/quiz/location/team13.json',
+
     url: 'https://tsup-9c256.firebaseio.com/testlocation.json',
     json:{
         "team":13,
@@ -70,8 +69,8 @@ request.post({
 });
 
 request.post({
-  url: 'https://tgr2020-quiz.firebaseio.com/quiz/location/team13.json',
-  //url: 'https://tsup-9c256.firebaseio.com/testlocation.json',
+  url: 'https://tgr2020-quiz2.firebaseio.com/quiz/location/team13.json',
+
   json:{
       "team":13,
       "latitude":Lat,
